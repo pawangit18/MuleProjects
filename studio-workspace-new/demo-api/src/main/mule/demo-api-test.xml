@@ -14,7 +14,8 @@
                 <http:headers>#[vars.outboundHeaders default {}]</http:headers>
             </http:error-response>
         </http:listener>
-        <apikit:router config-ref="demo-api-test-config" />
+        <logger level="INFO" doc:name="Logger" doc:id="d1c16fd3-a7ea-4e98-9286-6ff0c5afd982" />
+		<apikit:router config-ref="demo-api-test-config" />
         <error-handler>
             <on-error-propagate type="APIKIT:BAD_REQUEST">
                 <ee:transform doc:name="Transform Message">
