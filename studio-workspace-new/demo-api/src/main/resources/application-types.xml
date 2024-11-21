@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="EmpData" format="xml">
+      <types:example format="xml" element="EmpData" location="examples/EmpInputData.xml"/>
+    </types:type>
+    <types:type name="EmpOutputData" format="xml">
+      <types:example format="xml" element="EmpData" location="examples/EmpOutputData.xml"/>
+    </types:type>
+    <types:type name="Ebill_Input" format="xml">
+      <types:example format="xml" element="bill" location="examples/EbillInput.xml"/>
+    </types:type>
+    <types:type name="Ebill_Output" format="xml">
+      <types:example format="xml" element="bill" location="examples/EbillOutput.xml"/>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#b49cd5fb-fee5-4609-b2e8-c80155fc18cc">
+    <types:processor-declaration>
+      <types:output-event>
+        <types:message>
+          <types:payload type="Ebill_Output"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+  <types:enrichment select="#700fd1c3-64d8-4a08-927b-1185a661f102">
+    <types:processor-declaration>
+      <types:output-event>
+        <types:message>
+          <types:attributes type="Ebill_Input"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>

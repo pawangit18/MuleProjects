@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.mule.tooling.runtime.muleServerLaunchType">
+    <stringAttribute key="launch_mule_server_version" value="org.mule.tooling.server.4.7.ee"/>
+    <stringAttribute key="mule-agent-port" value="54250"/>
+    <stringAttribute key="mule-agent-token-auth" value="503f9549-c3e3-4822-95b2-fdfc4481d142"/>
+    <listAttribute key="mule-project-names">
+        <listEntry value="demo-hl7-adt"/>
+    </listAttribute>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="demo-hl7-adt"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-M-XX:-UseBiasedLocking -M-Dfile.encoding=UTF-8 -M-XX:+UseG1GC -M-XX:+UseStringDeduplication -M-Dmule.deployment.forceParseConfigXmls=true"/>
+</launchConfiguration>

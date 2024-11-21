@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "XmlData": null,
+    "StringData": "testdata",
+    "createddate": "2024-10-30T16:54:59.927"
+  },
+  {
+    "id": 2,
+    "XmlData": null,
+    "StringData": "testdata",
+    "createddate": "2024-10-30T16:55:20.303"
+  },
+  {
+    "id": 3,
+    "XmlData": null,
+    "StringData": "1234,testPateint1,2024-01-01,2024-01-10,11,2024-10-10\n2222,testPateint2,2024-01-01,2024-01-10,11,2024-10-10\n3333,testPateint3,2024-01-01,2024-01-10,11,2024-10-10\n4444,testPateint4,2024-01-01,2024-01-10,11,2024-10-10\n5555,testPateint5,2024-01-01,2024-01-10,11,2024-10-10\n",
+    "createddate": "2024-10-30T17:03:13.62"
+  },
+  {
+    "id": 4,
+    "XmlData": null,
+    "StringData": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<Input xmlns=\"http://SickLeave.Schemas.FlatFile_SickLeaveExtract\">\r\n  <RowData xmlns=\"\">\r\n    <RowData_Child1>1</RowData_Child1>\r\n    <RowData_Child2>2</RowData_Child2>\r\n    <RowData_Child3>3</RowData_Child3>\r\n    <RowData_Child4>4</RowData_Child4>\r\n    <RowData_Child5>5</RowData_Child5>\r\n    <RowData_Child6>6\n11,22,33,44,55,66\n</RowData_Child6>\r\n  </RowData>\r\n</Input>",
+    "createddate": "2024-10-31T16:07:29.02"
+  },
+  {
+    "id": 5,
+    "XmlData": null,
+    "StringData": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<Input xmlns=\"http://SickLeave.Schemas.FlatFile_SickLeaveExtract\">\r\n  <RowData xmlns=\"\">\r\n    <RowData_Child1>1</RowData_Child1>\r\n    <RowData_Child2>2</RowData_Child2>\r\n    <RowData_Child3>3</RowData_Child3>\r\n    <RowData_Child4>4</RowData_Child4>\r\n    <RowData_Child5>5</RowData_Child5>\r\n    <RowData_Child6>6\n11,22,33,44,55,66\n</RowData_Child6>\r\n  </RowData>\r\n</Input>",
+    "createddate": "2024-11-01T13:06:31.463"
+  }
+]

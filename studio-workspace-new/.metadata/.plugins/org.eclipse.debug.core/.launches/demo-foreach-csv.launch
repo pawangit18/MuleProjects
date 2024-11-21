@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.mule.tooling.runtime.muleServerLaunchType">
+    <stringAttribute key="launch_mule_server_version" value="org.mule.tooling.server.4.7.ee"/>
+    <stringAttribute key="mule-agent-port" value="53576"/>
+    <stringAttribute key="mule-agent-token-auth" value="3c2d7146-3394-45df-a7f9-f0c49c80e7e9"/>
+    <listAttribute key="mule-project-names">
+        <listEntry value="demo-foreach-csv"/>
+    </listAttribute>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="demo-foreach-csv"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-M-XX:-UseBiasedLocking -M-Dfile.encoding=UTF-8 -M-XX:+UseG1GC -M-XX:+UseStringDeduplication -M-Dmule.deployment.forceParseConfigXmls=true"/>
+</launchConfiguration>

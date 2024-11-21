@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns:file="http://www.mulesoft.org/schema/mule/file"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="d3eaf08b-ea78-4303-9deb-4a6dc6f069cb" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="demo-error-handlingFlow" doc:id="2d9a26bf-b3c9-42ba-98f4-879bf5aa7154" >
+		<http:listener doc:name="Listener" doc:id="3b515f26-e2b4-4843-8dc7-f9f09fb8bf01" config-ref="HTTP_Listener_config" path="/checkdriveage"/>
+		<logger level="INFO" doc:name="Logger" doc:id="64fbecae-98a8-42e5-91a1-db080d0db642" />
+		<choice doc:name="Choice" doc:id="489c4b8a-31ba-43a5-b090-53d306f1ccd6" >
+			<when expression="#[attributes.queryParams.age &lt;16]">
+				<raise-error doc:name="Raise error" doc:id="756a8c6e-eac4-47de-9f3e-d82341b5bf52" type="PRECONDITIONS:INCORRECT_AGE" description="Minimum age of 16 required to drive" />
+			</when>
+			<otherwise >
+				<logger level="INFO" doc:name="Logger" doc:id="90bd3bca-c203-429b-b1b9-639dd8f3bbfe" message="User age above 16 years. Allowed to drive"/>
+			</otherwise>
+		</choice>
+		<set-payload value="payload" doc:name="Set Payload" doc:id="357fe7fa-f59b-47a9-a658-7c77547ab6fd" />
+		<error-handler>
+			<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="3576d736-4ae8-4a7f-bcc9-1768e12ea6f4" type="PRECONDITIONS:INCORRECT_AGE">
+				<logger level="ERROR" doc:name="Logger" doc:id="69347747-9626-47aa-b467-2ea701be1c84" message="Minimum age to drive is 16 years old"/>
+			</on-error-continue>
+			<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="ab822694-4a40-4790-a05b-afa5dc353ce7" type="EXPRESSION">
+				<logger level="INFO" doc:name="Logger" doc:id="36c10c93-9d75-4cb2-a6f3-927fdef3ac33" message="The parameter age is missing or invalid"/>
+			</on-error-continue>
+		</error-handler>
+	</flow>
+</mule>

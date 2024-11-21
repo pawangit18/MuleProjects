@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:mllp="http://www.mulesoft.org/schema/mule/mllp" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/mllp http://www.mulesoft.org/schema/mule/mllp/current/mule-mllp.xsd">
+	<mllp:mllp-listener-config name="HL7_MLLP_Mllp_listener_config" doc:name="HL7 MLLP Mllp listener config" doc:id="8e9e6b8f-50cb-46dd-a406-bf61f625565e" >
+		<mllp:mllp-listener-connection host="localhost" port="6060" />
+	</mllp:mllp-listener-config>
+	<flow name="demo-hl7-adtFlow" doc:id="03c07578-3d3e-4156-97a7-9edb01fd3e73" >
+		<mllp:mllp-listener doc:name="Mllp listener" doc:id="bc9be35d-76c9-4305-8cd4-7435d27aaa0d" config-ref="HL7_MLLP_Mllp_listener_config"/>
+	</flow>
+</mule>
