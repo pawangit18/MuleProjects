@@ -2714,3 +2714,319 @@ java.lang.ClassCastException: class org.eclipse.team.internal.ui.history.FileRev
 
 !ENTRY org.mule.tooling.ui.contribution.munit 1 1 2024-11-20 23:10:09.848
 !MESSAGE Deleting MUnit temporary folder in C:\Users\PAWANG~1\AppData\Local\Temp\munit-temp-dir
+!SESSION 2024-11-21 07:29:23.097 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 2 0 2024-11-21 07:29:51.245
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-11-21 07:29:51.245
+!MESSAGE Cannot bind to an undefined command: plug-in='org.mule.alsp', id='org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand'
+
+!ENTRY org.eclipse.jface 2 0 2024-11-21 07:29:54.855
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-11-21 07:29:54.855
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.mule.tooling.core 1 0 2024-11-21 07:29:58.864
+!MESSAGE Mule Version 4.7.0, was mapped to Tooling Version 4.7.0
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2024-11-21 07:29:59.502
+!MESSAGE Creating MUnit temporary folder in C:\Users\PAWANG~1\AppData\Local\Temp\munit-temp-dir
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-11-21 07:30:04.619
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\PawanGurjar'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.mule.tooling.core 1 0 2024-11-21 07:30:21.634
+!MESSAGE Started tooling v[4.7.0] with timeout [90s] at path:
+C:\AnypointStudio\configuration\org.eclipse.osgi\410\data\.runtimes\tooling-aasjz2en
+
+!ENTRY org.mule.tooling.core 1 0 2024-11-21 07:31:01.652
+!MESSAGE Checking updates in Exchange for: [org.mule.connectors:mule-file-connector, org.mule.modules:mule-apikit-module, com.mulesoft.connectors:mule-hl7-extension, com.mulesoft.connectors:mule-hl7-mllp-connector, org.mule.connectors:mule-sockets-connector, org.mule.connectors:mule-http-connector, org.mule.connectors:mule-db-connector]
+
+!ENTRY org.mule.tooling.core 1 0 2024-11-21 07:31:14.128
+!MESSAGE Check finished: there are updates for some Mule Modules
+
+!ENTRY org.mule.tooling.core 1 0 2024-11-21 07:31:48.556
+!MESSAGE Tooling workspace is C:\MyData\Work\Integration\Mulesoft\MuleProjects\studio-workspace-new\.tooling-apps-cache
+
+!ENTRY org.eclipse.jface 2 0 2024-11-21 07:31:49.137
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-11-21 07:31:49.137
+!MESSAGE A conflict occurred for CTRL+7:
+Binding(CTRL+7,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.toggle.comment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+Binding(CTRL+7,
+	ParameterizedCommand(Command(org.mule.tooling.messageflow.editor.comment,Toggle Comment,
+		Toggle comment for the selected processors,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		WorkbenchHandlerServiceHandler("org.mule.tooling.messageflow.editor.comment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.keybindings.contexts.muleStudioFocus,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-11-21 07:31:49.137
+!MESSAGE A conflict occurred for CTRL+SHIFT+K:
+Binding(CTRL+SHIFT+K,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findPrevious,Find Previous,
+		Find previous item,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.findPrevious"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+K,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findPrevious,Find Previous,
+		Find previous item,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.findPrevious"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-11-21 07:31:49.137
+!MESSAGE A conflict occurred for CTRL+SHIFT+F:
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.format,Format,
+		Format the selected text,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.format"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.mule.tooling.ui.openFlow,Open Flow,
+		Search For Flows in the current workspace,
+		Category(org.eclipse.core.commands.categories.autogenerated,Uncategorized,Commands that were either auto-generated or have no category,true),
+		WorkbenchHandlerServiceHandler("org.mule.tooling.ui.openFlow"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-11-21 07:31:49.137
+!MESSAGE A conflict occurred for CTRL+K:
+Binding(CTRL+K,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findNext,Find Next,
+		Find next item,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.findNext"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+K,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findNext,Find Next,
+		Find next item,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.findNext"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-11-21 07:31:49.137
+!MESSAGE A conflict occurred for CTRL+SHIFT+X:
+Binding(CTRL+SHIFT+X,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.upperCase,To Upper Case,
+		Changes the selection to upper case,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.text.upperCase"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+Binding(CTRL+SHIFT+X,
+	ParameterizedCommand(Command(org.mule.tooling.runtime.muleLaunchShortcut.run,Run Mule Application,
+		Run Mule Application,
+		Category(org.mule.tooling.runtime.ui.category,Runtime Category,null,true),
+		WorkbenchHandlerServiceHandler("org.mule.tooling.runtime.muleLaunchShortcut.run"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.mule.tooling.core 2 0 2024-11-21 07:31:49.700
+!MESSAGE Couldn't parse DW script as KeyValue pairs
+
+!ENTRY org.mule.tooling.core 2 0 2024-11-21 07:31:49.912
+!MESSAGE Couldn't parse DW script as KeyValue pairs
+
+!ENTRY org.mule.tooling.maven 1 0 2024-11-21 07:32:06.152
+!MESSAGE  *** 17349 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=, mavenOpts=]]
+
+!ENTRY org.mule.tooling.core 2 0 2024-11-21 07:33:03.892
+!MESSAGE Couldn't parse DW script as KeyValue pairs
+
+!ENTRY org.mule.tooling.core 2 0 2024-11-21 07:33:04.052
+!MESSAGE Couldn't parse DW script as KeyValue pairs
+
+!ENTRY org.mule.tooling.core 2 0 2024-11-21 07:33:07.840
+!MESSAGE Couldn't parse DW script as KeyValue pairs
+
+!ENTRY org.mule.tooling.core 2 0 2024-11-21 07:33:07.977
+!MESSAGE Couldn't parse DW script as KeyValue pairs
+
+!ENTRY org.eclipse.jface 2 0 2024-11-21 07:33:10.087
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-11-21 07:33:10.087
+!MESSAGE A conflict occurred for F2:
+Binding(F2,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(F2,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.showInformation,Show Tooltip Description,
+		Displays information for the current caret location in a focused hover,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.text.showInformation"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+
+!ENTRY org.eclipse.egit.core 4 0 2024-11-21 07:42:35.291
+!MESSAGE An exception occurred during push on URI https://github.com/pawangit18/MuleProjects.git: https://github.com/pawangit18/MuleProjects.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/pawangit18/MuleProjects.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:696)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:638)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:138)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1537)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2024-11-21 07:42:35.293
+!MESSAGE Can't connect to any repository: https://github.com/pawangit18/MuleProjects.git (https://github.com/pawangit18/MuleProjects.git: not authorized)
+
+!ENTRY org.eclipse.egit.core 4 0 2024-11-21 07:43:34.532
+!MESSAGE An exception occurred during push on URI https://github.com/pawangit18/MuleProjects.git: https://github.com/pawangit18/MuleProjects.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/pawangit18/MuleProjects.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:696)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:638)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:138)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1537)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2024-11-21 07:43:34.532
+!MESSAGE Can't connect to any repository: https://github.com/pawangit18/MuleProjects.git (https://github.com/pawangit18/MuleProjects.git: not authorized)
+
+!ENTRY org.mule.tooling.core 4 0 2024-11-21 07:45:07.357
+!MESSAGE There was a problem while sending events to Amplitude
+!STACK 0
+com.mulesoft.telemetry.SendBundleException: HTTP POST failed
+	at com.mulesoft.telemetry.TelemetryHttpClient.send(TelemetryHttpClient.java:109)
+	at com.mulesoft.telemetry.DefaultTelemetryService.send(DefaultTelemetryService.java:234)
+	at com.mulesoft.telemetry.DefaultTelemetryService.sendEvents(DefaultTelemetryService.java:226)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.http.NoHttpResponseException: studio-metrics-report.cloudhub.io:443 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at com.mulesoft.telemetry.TelemetryHttpClient.send(TelemetryHttpClient.java:107)
+	... 8 more
+
+!ENTRY org.eclipse.egit.core 4 0 2024-11-21 07:46:03.033
+!MESSAGE An exception occurred during push on URI https://github.com/pawangit18/MuleProjects.git: https://github.com/pawangit18/MuleProjects.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/pawangit18/MuleProjects.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:696)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:638)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:138)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1537)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2024-11-21 07:46:03.033
+!MESSAGE Can't connect to any repository: https://github.com/pawangit18/MuleProjects.git (https://github.com/pawangit18/MuleProjects.git: not authorized)
+
+!ENTRY org.eclipse.egit.core 4 0 2024-11-21 07:54:05.164
+!MESSAGE An exception occurred during push on URI https://github.com/pawangit18/MuleProjects.git: https://github.com/pawangit18/MuleProjects.git: not authorized
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: https://github.com/pawangit18/MuleProjects.git: not authorized
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:168)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:315)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/pawangit18/MuleProjects.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:696)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:638)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:138)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1537)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:158)
+	... 4 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2024-11-21 07:54:05.164
+!MESSAGE Can't connect to any repository: https://github.com/pawangit18/MuleProjects.git (https://github.com/pawangit18/MuleProjects.git: not authorized)
+
+!ENTRY org.eclipse.egit.core 4 0 2024-11-21 07:56:27.197
+!MESSAGE An exception occurred during push on URI https://github.com/pawangit18/MuleProjects.git: https://github.com/pawangit18/MuleProjects.git: not authorized
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: https://github.com/pawangit18/MuleProjects.git: not authorized
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:168)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:315)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/pawangit18/MuleProjects.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:696)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:638)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:138)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1537)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:158)
+	... 4 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2024-11-21 07:56:27.197
+!MESSAGE Can't connect to any repository: https://github.com/pawangit18/MuleProjects.git (https://github.com/pawangit18/MuleProjects.git: not authorized)
