@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+	<file:config name="File_Config" doc:name="File Config" doc:id="d79b95d3-f70d-456c-b7fa-fbc8a785ccd8" >
+	</file:config>
+	<file:config name="File_Config_out" doc:name="File Config" doc:id="78e86dd0-6ba7-4bca-a58c-455abb021b71" >
+		<file:connection workingDir="C:\MyData\Work\Integration\Mulesoft\studio-workspace-new\demo-foreach-csv\Test\Out\" />
+	</file:config>
+	<flow name="demo-foreach-csvFlow" doc:id="660b6cc0-8567-450d-920d-b636d3b61bfc" >
+		<file:listener doc:name="On New or Updated File" doc:id="f2639d6b-de96-4546-933a-28a79ce21c25" config-ref="File_Config" autoDelete="true" directory="C:\MyData\Work\Integration\Mulesoft\studio-workspace-new\demo-foreach-csv\Test\In\">
+			<scheduling-strategy >
+				<fixed-frequency />
+			</scheduling-strategy>
+		</file:listener>
+		<ee:transform doc:name="Transform Message" doc:id="64a7a4ae-5091-4d7b-ad8f-b207ce80fc98" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/java
+---
+payload]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<foreach doc:name="For Each" doc:id="fe633185-f66a-471e-8973-a130cde29d07" collection="#[payload]">
+			<ee:transform doc:name="Transform Message" doc:id="8f9a6162-d544-4af8-907d-2acf358cf2de" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/csv
+---
+payload]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+			<file:write doc:name="Write" doc:id="99510bad-ac5c-4fcf-a7b9-b032273eeb1f" config-ref="File_Config_out"/>
+		</foreach>
+	</flow>
+</mule>

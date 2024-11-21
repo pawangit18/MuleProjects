@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+org.mule.tooling.amc.apps={"userProjectMap"\:{"pawangurjaribm-nov"\:{"demo-hl7-adt"\:"{\\"applicationName\\"\:\\"demo-hl7-adt\\",\\"muleRuntime\\"\:\\"4.8.1\:6e-java8\\",\\"properties\\"\:{},\\"deploymentId\\"\:\\"37b24cfe-2f20-4446-8390-fa201ea72b00\\"}"}}}
+org.mule.tooling.ui.properties.enable.api.dependencies=true

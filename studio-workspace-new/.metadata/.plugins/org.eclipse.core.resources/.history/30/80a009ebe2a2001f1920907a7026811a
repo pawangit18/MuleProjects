@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="f9b75f77-670e-454f-8d70-74164e11d36e" basePath="/test" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="firstprojFlow" doc:id="04524166-8583-4e99-80c2-63c55d896722" >
+		<http:listener doc:name="Listener" doc:id="20725a26-b1a8-4d1c-9f66-59525cbff344" config-ref="HTTP_Listener_config" path="/api"/>
+		<logger level="INFO" doc:name="Logger" doc:id="88945706-3c99-414d-94e9-447de7406836" message="#[payload]"/>
+		<choice doc:name="Choice" doc:id="d3d3c383-c5cf-4ed7-a034-325786d89d4f" >
+			<when expression='#[payload.attributes.country == "India"]'>
+				<logger level="INFO" doc:name="Logger" doc:id="24618d32-1a5e-4897-a92c-792edaf70268" />
+			</when>
+		</choice>
+	</flow>
+</mule>

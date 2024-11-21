@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:batch="http://www.mulesoft.org/schema/mule/batch" xmlns:file="http://www.mulesoft.org/schema/mule/file"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/batch/current/mule-batch.xsd">
+	<file:config name="File_Config" doc:name="File Config" doc:id="6d4e2d57-13f8-4ea8-bbee-7d1d1c035ee6" />
+	<flow name="demo-batch-jobFlow" doc:id="3e3f10c6-b2a2-417c-8749-f025419553df" >
+		<file:listener doc:name="On New or Updated File" doc:id="f694d89b-478d-447d-bcca-eef9aa99f28a" config-ref="File_Config" directory="C:\MyData\Work\Integration\Mulesoft\studio-workspace-new\demo-batch-job\Test\In\" autoDelete="true">
+			<scheduling-strategy >
+				<fixed-frequency />
+			</scheduling-strategy>
+		</file:listener>
+		<set-payload value='["Apple","Banana"]' doc:name="Set Payload" doc:id="e051ff8f-7aa8-4cd7-80e1-a166d5a5fd58" />
+		<batch:job jobName="demo-batch-jobBatch_Job" doc:id="f7d4bc62-8b5c-4863-b1e5-b6ede913c2e3" >
+			<batch:process-records >
+				<batch:step name="Batch_Step1" doc:id="28955d4f-b40e-4442-9af2-45fb89a85c4a" >
+					<set-payload value='#[payload ++ "1"]' doc:name="Set Payload" doc:id="06723fc2-887f-4e90-9215-c5a7b0c83094" />
+				</batch:step>
+				<batch:step name="Batch_Step" doc:id="7277b7d6-7a93-4beb-a01b-b15ed2abe6d1" >
+					<set-payload value='#[payload ++ "2"]' doc:name="Set Payload" doc:id="fa09a8ed-73c6-4868-b827-f2f6dcbe4e68" />
+				</batch:step>
+			</batch:process-records>
+			<batch:on-complete >
+				<logger level="INFO" doc:name="Logger" doc:id="6b1eb6e0-be0d-4de4-a2e5-822e7ff0cbc2" message="#[payload]"/>
+			</batch:on-complete>
+		</batch:job>
+	</flow>
+</mule>

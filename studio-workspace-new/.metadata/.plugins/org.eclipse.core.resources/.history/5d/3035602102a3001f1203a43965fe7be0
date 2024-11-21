@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:hl7="http://www.mulesoft.org/schema/mule/hl7"
+	xmlns:mllp="http://www.mulesoft.org/schema/mule/mllp"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/mllp http://www.mulesoft.org/schema/mule/mllp/current/mule-mllp.xsd
+http://www.mulesoft.org/schema/mule/hl7 http://www.mulesoft.org/schema/mule/hl7/current/mule-hl7.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<mllp:mllp-listener-config name="HL7_MLLP_Mllp_listener_config" doc:name="HL7 MLLP Mllp listener config" doc:id="8e9e6b8f-50cb-46dd-a406-bf61f625565e" >
+		<mllp:mllp-listener-connection host="localhost" port="6060" />
+	</mllp:mllp-listener-config>
+	<hl7:config name="HL7_EDI_Config" doc:name="HL7 EDI Config" doc:id="66652c1a-7677-483d-acb1-18cfa262d970" >
+		<hl7:schemas >
+			<hl7:schema value="/hl7lax/v2_5/ADT_A01.esl" />
+		</hl7:schemas>
+	</hl7:config>
+	<hl7:config name="HL7_EDI_Config1" doc:name="HL7 EDI Config" doc:id="26edefab-43b3-48f6-aae9-6f1e8344b4a3" >
+		<hl7:schemas />
+	</hl7:config>
+	<hl7:config name="HL7_EDI_Config2" doc:name="HL7 EDI Config" doc:id="e0afceee-3238-4fbf-bcdd-700dfd736943" >
+		<hl7:schemas >
+			<hl7:schema value="/hl7lax/v2_5/ACK.esl" />
+		</hl7:schemas>
+	</hl7:config>
+	<flow name="demo-hl7-adtFlow" doc:id="03c07578-3d3e-4156-97a7-9edb01fd3e73" >
+		<mllp:mllp-listener doc:name="Mllp listener" doc:id="bc9be35d-76c9-4305-8cd4-7435d27aaa0d" config-ref="HL7_MLLP_Mllp_listener_config"/>
+		<hl7:read doc:name="Read" doc:id="e64fcb44-2cc1-4908-938e-40f3075691d8" config-ref="HL7_EDI_Config"/>
+		<logger level="INFO" doc:name="Logger" doc:id="5cffbe34-7faa-4e84-8624-a5d75bbca013" message="#[payload]"/>
+		<ee:transform doc:name="Transform Message" doc:id="7e4a8d1e-d1d3-4d97-9b53-2435869fdfd1" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	Delimiters: payload.Delimiters,	
+	 Name: "ACK",     
+	"Id":"ACK", 
+	"Data" : 
+	{
+		"ACK" : payload.ACK	
+	}
+}
+]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<hl7:write doc:name="Write" doc:id="9c41b0aa-6f57-4df5-95c1-b74e9870e42d" config-ref="HL7_EDI_Config2"/>
+	</flow>
+</mule>
